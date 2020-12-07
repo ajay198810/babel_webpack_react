@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
  
-const App = ({ title }) =>
-  <div>{title}</div>;
- 
+const App = ({ title }) =>{
+  const [t, setT] = useState(title);
+  useEffect(()=> console.log(t), [t]);
+  return (
+    <div>{t}</div>
+  );
+}
 export default App;
