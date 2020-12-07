@@ -10,10 +10,14 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.tsx?$/,
+        loader: 'babel-loader'
+      }
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['*', '.js', '.jsx', '.tsx'],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
